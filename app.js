@@ -44,6 +44,6 @@ app.get("/", function (req, res) {
 });
 
 // server listening port
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("express http server started at...3000");
 });
