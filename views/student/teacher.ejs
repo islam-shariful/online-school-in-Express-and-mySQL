@@ -1,0 +1,55 @@
+<%- include('header')%>
+            <!-- PAGE CONTAINER-->
+            <div class="content-page">
+                <div class="content content-main">
+                    <div class="loadings hidden"></div>
+                    <!-- BEGIN PlACE PAGE CONTENT HERE -->
+                    <!--title-->
+<div class="row ">
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="page-title">Teachers </h4>
+      </div> <!-- end card body-->
+    </div> <!-- end card -->
+  </div><!-- end col-->
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body teacher_content">
+                <table id="basic-datatable" class="table table-striped dt-responsive nowrap" width="100%">
+                    <thead>
+                        <tr style="background-color: #313a46; color: #ababab;">
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Designation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (teacher) { 
+                            for(var i=0; i < teacher.length; i++){ %>
+                        <tr>
+                            <td><%= teacher[i].teachername %></td>
+                            <td><%= teacher[i].teacheremail %></td>
+                            <td><%= teacher[i].teacherdepartment %></td>
+                            <td><%= teacher[i].teacherdesignation %></td>
+                        </tr>
+                        <% } %>
+                    <% }%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+                    <!-- END PLACE PAGE CONTENT HERE -->
+</div>
+</div>
+            <!-- END CONTENT -->
+        </div>
+    </div>
+    <!-- all the js files -->
+    
+<%- include('footer')%>

@@ -1,0 +1,104 @@
+<%- include('header')%>
+
+            <!-- PAGE CONTAINER-->
+<div class="content-page">
+	<div class="content content-main">
+		<div class="loadings hidden"></div>
+                    <!-- BEGIN PlACE PAGE CONTENT HERE -->
+                    <!--title-->
+<div class="row ">
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="page-title"> Class Routine</h4>
+      </div> <!-- end card body-->
+    </div> <!-- end card -->
+  </div><!-- end col-->
+</div>
+
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+					<table id="basic-datatable" class="table table-striped dt-responsive nowrap" width="100%">
+					  <thead>
+						<tr style="background-color: #313a46; color: #ababab;">
+							<th>Day/Time</th>
+							<th>9AM-10AM</th>
+							<th>10AM-11AM</th>
+							<th>11AM-12AM</th>
+							<th>1PM-2PM</th>
+						</tr>
+					  </thead>
+					<tbody>
+				     	<tr>
+							<td>Saturday</td>
+							<% if (routine1){
+								for(var i=0; i < routine1.length; i++){ %>
+							
+							<td>Subject:<%= routine1[i].subjectname %><br>Teacher:<%= routine1[i].teachername %></td>
+						<%}}%>
+						</tr>
+						<tr>
+							<td>Sunday</td>
+							<% if (routine2){
+								for(var i=0; i < routine2.length; i++){ %>
+							
+							<td>Subject:<%= routine2[i].subjectname %><br>Teacher:<%= routine2[i].teachername %></td>
+						<%}}%>
+						</tr>
+						<tr>
+							<td>Monday</td>
+							<% if (routine3){
+								for(var i=0; i < routine3.length; i++){ %>
+							
+							<td>Subject:<%= routine3[i].subjectname %><br>Teacher:<%= routine3[i].teachername %></td>
+						<%}}%>
+						</tr>
+						<tr>
+							<td>Tuesday</td>
+							<% if (routine4){
+								for(var i=0; i < routine4.length; i++){ %>
+							
+							<td>Subject:<%= routine4[i].subjectname %><br>Teacher:<%= routine4[i].teachername %></td>
+						<%}}%>
+						</tr>
+						<tr>
+							<td>Wednesday</td>
+							<% if (routine5){
+								for(var i=0; i < routine5.length; i++){ %>
+							
+							<td>Subject:<%= routine5[i].subjectname %><br>Teacher:<%= routine5[i].teachername %></td>
+						<%}}%>
+						</tr>
+						<tr>
+							<td>Thursday</td>
+							<% if (routine6){
+								for(var i=0; i < routine6.length; i++){ %>
+							
+							<td>Subject:<%= routine6[i].subjectname %><br>Teacher:<%= routine6[i].teachername %></td>
+						<%}}%>
+						</tr>
+						<tr>
+							<td>Friday</td>
+							<td>Weekly Off Day</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>		
+					</tbody>
+				    </table>
+			    </div>
+		</div>
+	</div>
+</div>
+
+ </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <%- include('footer')%>

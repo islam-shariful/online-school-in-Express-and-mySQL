@@ -1,0 +1,53 @@
+<%- include('header')%>
+
+            <!-- PAGE CONTAINER-->
+<div class="content-page">
+	<div class="content content-main">
+		<div class="loadings hidden"></div>
+                    <!-- BEGIN PlACE PAGE CONTENT HERE -->
+                    <!--title-->
+<div class="row ">
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="page-title"> Syllabus</h4>
+      </div> <!-- end card body-->
+    </div> <!-- end card -->
+  </div><!-- end col-->
+</div>
+
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+					<table id="basic-datatable" class="table table-striped dt-responsive nowrap" width="100%">
+					  <thead>
+						<tr style="background-color: #313a46; color: #ababab;">
+							<th>Title</th>
+							<th>Subject</th>
+							<th>Download</th>
+						</tr>
+					  </thead>
+					<tbody>
+                        <% if (syllabus){
+                            for(var i=0; i < syllabus.length; i++){ %> 
+                        <tr>
+                            <td><%= syllabus[i].title %></td>
+                            <td><%= syllabus[i].subjectname %></td>
+                            <td><a class="btn btn btn-secondary" href="/assets/file/<%= syllabus[i].directory %>" download><i class="fa fa-download" style="width:50%"></i> Download</a></td>
+						
+						</tr>
+						<%}}%>		
+					</tbody>
+				    </table>
+			    </div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    
+<%- include('footer')%>

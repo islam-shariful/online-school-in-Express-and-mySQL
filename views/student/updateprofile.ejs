@@ -1,0 +1,111 @@
+<%- include('header')%>
+<% if (profile) { 
+    for(var i=0; i < profile.length; i++){ %> 
+            <!-- PAGE CONTAINER-->
+            <div class="content-page">
+                <div class="content content-main">
+                    <div class="loadings hidden"></div>
+                    <!-- BEGIN PlACE PAGE CONTENT HERE -->
+                    <!-- start page title -->
+<div class="row ">
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="page-title">Manage Profile</h4>
+      </div> <!-- end card body-->
+    </div> <!-- end card -->
+  </div><!-- end col-->
+</div>
+<!-- end page title -->
+<div class="row">
+    <div id = "profile_content" class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="row justify-content-md-center">
+    <div class="col-xl-10 col-lg-12 col-md-12 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title">Update Profile</h4>
+                <form method="POST" class="col-12 " action="/student/updateprofile">
+                    
+                    <div class="col-12">
+                        <div class="form-group row mb-3">
+                            <label class="col-md-3 col-form-label" for="name"> Name</label>
+                            <div class="col-md-9">
+                                <input type="text" id="name" name="name" class="form-control"  value="<%= profile[i].studentname %>" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-3">
+                            <label class="col-md-3 col-form-label" for="email">Email</label>
+                            <div class="col-md-9">
+                                <input type="email" id="email" name="email" class="form-control"  value="<%= profile[i].studentemail%>" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row mb-3">
+                            <label class="col-md-3 col-form-label" for="fathername">Father Name</label>
+                            <div class="col-md-9">
+                                <input type="text" id="name" name="fathername" class="form-control"  value="<%= profile[i].studentfathername %>" required>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <label class="col-md-3 col-form-label" for="mothername"> Name</label>
+                            <div class="col-md-9">
+                                <input type="text" id="name" name="mothername" class="form-control"  value="<%= profile[i].studentmothername %>" required>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <label class="col-md-3 col-form-label" for="phone"> Phone</label>
+                            <div class="col-md-9">
+                                <input type="text" placeholder="After +880" id="phone" name="phone" class="form-control"  value="<%= profile[i].guardiannumber %>"required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-3">
+                            <label class="col-md-3 col-form-label" for="address"> Address</label>
+                            <div class="col-md-9">
+                                <textarea class="form-control" id="address" name = "address" rows="5" value="<%= profile[i].studentaddress %>"><%= profile[i].studentaddress %></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-secondary col-xl-4 col-lg-4 col-md-12 col-sm-12">Update Profile</button>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div> <!-- end card body-->
+        </div> <!-- end card -->
+    </div>
+
+</div>
+    </div>
+</div>
+
+<script>
+    function readURL(input)
+        {
+            if (input.files && input.files[0]) 
+            {
+                var reader= new FileReader();
+                reader.onload =function(e)
+                {
+                    $('#Image')
+                    .attr('src',e.target.result)
+                    .width(250)
+                    .height(200);;
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        </script>                    <!-- END PLACE PAGE CONTENT HERE -->
+                </div>
+            </div>
+            <!-- END CONTENT -->
+        </div>
+    </div>
+    <!-- all the js files -->
+    
+<!-- bundle -->
+<% } %>
+<% } %>
+<%- include('footer')%>

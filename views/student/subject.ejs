@@ -1,0 +1,52 @@
+<%- include('header')%>
+            <!-- PAGE CONTAINER-->
+            <div class="content-page">
+                <div class="content content-main">
+                    <div class="loadings hidden"></div>
+                    <!-- BEGIN PlACE PAGE CONTENT HERE -->
+                    <!--title-->
+<div class="row ">
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="page-title"> Subject</h4>
+      </div> <!-- end card body-->
+    </div> <!-- end card -->
+  </div><!-- end col-->
+</div>
+
+
+  <div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body teacher_content">
+                <table id="basic-datatable" class="table table-striped dt-responsive nowrap" width="100%">
+                    <thead>
+                        <tr style="background-color: #313a46; color: #ababab;">
+                            <th>Subject Code</th>
+                            <th>Subject Name</th>
+                            <th>Teacher Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (subject) { 
+                            for(var i=0; i < subject.length; i++){ %>
+                        <tr>
+                            <td><%= subject[i].subject_id %></td>
+                            <td><%= subject[i].subjectname %></td>
+                            <td><%= subject[i].teachername %></td>
+                        </tr>
+                        <% } %>
+                    <% }%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('footer')%>

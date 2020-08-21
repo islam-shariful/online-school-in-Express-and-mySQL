@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>School</title>
+    <link rel="shortcut icon" href="/assets/img/favicon.png">
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <script src="/assets/css/jquery.min.js"></script>
+    <script src="/assets/css/jspdf.min.js"></script>
+</head>
+
+<body data-layout="detached">
+ 
+<div class="navbar-custom topnav-navbar topnav-navbar-dark">
+    <div class="container-fluid">
+
+        <!-- LOGO -->
+        <a href="" class="topnav-logo" style = "min-width: unset;">
+            <span class="topnav-logo-lg">
+                <img src="/assets/img/favicon.png" alt="" height="40">
+            </span>
+        </a>
+        <ul class="list-unstyled topbar-right-menu float-right mb-0">     
+            <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" href="/logout" role="button">
+            <span>
+                <span class="account-user-name">Logout</span>
+                
+            </span>
+            </a>
+        </ul>
+        <ul class="list-unstyled topbar-right-menu float-right mb-0">
+            <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" href="/student/stprofile" role="button">
+                <span class="account-user-avatar">
+                    <img src="/assets/img/<%= image %>" alt="user-image" class="rounded-circle">
+                </span>
+                <span>
+                    <span class="account-user-name"><%= name%></span>
+                    <span class="account-position">Student</span>
+                    
+                </span>
+            </a>
+        </ul>
+</div>
+</div>
+<div class="container-fluid">
+<div class="wrapper">
+
+<div class="left-side-menu left-side-menu-detached content-main">
+
+    <div class="leftbar-user">
+        <a href="javascript: void(0);">
+        <img src="/assets/img/<%= image %>" alt="user-image" height="42" class="rounded-circle shadow-sm">
+                <span class="leftbar-user-name"><%= name %></span>
+        </a>
+    </div>
+  <!--- Sidemenu -->
+    <ul class="metismenu side-nav side-nav-light">
+        <li class="side-nav-item">
+            <a href="/student/stdash" class="side-nav-link">
+            <span> Dashboard </span></a>
+        </li>
+        <li class="side-nav-item"><a href="/student/teacher" class="side-nav-link">
+            <span>Teacher</span></a>
+        </li>
+        <li class="side-nav-item"><a href="/student/routine" class="side-nav-link">
+            
+            <span>Class Routine</span></a>
+        </li>
+        <li class="side-nav-item"><a href="/student/subject" class="side-nav-link">
+            
+            <span>Subject</span></a>
+        </li>
+        <li class="side-nav-item"><a href="/student/syllabus" class="side-nav-link">
+            
+            <span>Syllabus</span></a>
+        </li>
+        <li class="side-nav-item"><a href="/student/notes" class="side-nav-link">
+            
+            <span>Notes</span></a>
+        </li>
+        <li class="side-nav-item"><a href="/student/assignment" class="side-nav-link">
+            
+            <span>Assignments</span></a>
+        </li>
+        <li class="side-nav-item"><a href="/student/generatepdf" class="side-nav-link">
+            <span>Grades</span></a>
+        </li>
+        <li class="side-nav-item"><a href="/student/found" class="side-nav-link">
+            <span>Lost & found</span></a>
+        </li>
+    </ul>
+  <!-- End Sidebar -->
+  <div class="clearfix"></div>
+
+</div>
+<!-- Left Sidebar End -->
