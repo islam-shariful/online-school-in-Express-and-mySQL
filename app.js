@@ -40,7 +40,8 @@ app.use("/teacher", teacher.routes);
 
 // route to landing page
 app.get("/", function (req, res) {
-  res.send("this is index <br> LANDING page!<br> <a href='/login'> Login</a> ");
+  //res.send("this is index <br> LANDING page!<br> <a href='/login'> Login</a> ");
+  res.redirect('/login');
 });
 
 // server listening port
