@@ -2,9 +2,9 @@ var mysql = require("mysql");
 
 var config = {
   host: "sql12.freemysqlhosting.net",
-  user: "sql12365350",
-  password: "aBemYqzEd9",
-  database: "sql12365350",
+  user: "sql12373351",
+  password: "vyNizZX9NQ",
+  database: "sql12373351",
   multipleStatements: true,
 };
 
