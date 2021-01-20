@@ -4,7 +4,7 @@ var config = {
   host: "sql100.byethost7.com",
   user: "b7_27726326",
   password: "byethost",
-  database: "sms",
+  database: "b7_27726326_sms",
   multipleStatements: true,
 };
 
