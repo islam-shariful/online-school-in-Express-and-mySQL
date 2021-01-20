@@ -1,10 +1,10 @@
 var mysql = require("mysql");
 
 var config = {
-  host: "sql12.freemysqlhosting.net",
-  user: "sql12373351",
-  password: "vyNizZX9NQ",
-  database: "sql12373351",
+  host: "sql100.byethost7.com",
+  user: "b7_27726326",
+  password: "byethost",
+  database: "sms",
   multipleStatements: true,
 };
 
